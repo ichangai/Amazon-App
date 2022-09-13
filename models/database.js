@@ -20,3 +20,4 @@ db.once('open', function(){
 require('./user');
 require('./product');
 require('./category');
+require('./owner');

@@ -15,12 +15,16 @@ const app = express()
 //Middlewares
 app.use(morgan('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended :false}));
+app.use(bodyParser.urlencoded({ extended :false }));
 
 // require apis
 const productRoutes = require('./routes/products');
+const categoryRoutes = require('./routes/category');
+const ownerRoutes = require('./routes/owner');
 
 app.use("/api", productRoutes);
+app.use("/api", categoryRoutes);
+app.use("/api", ownerRoutes);
 
 app.listen(3000, err => {
     if(err){

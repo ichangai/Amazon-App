@@ -9,7 +9,7 @@ const ProductSchema = new Schema({
     photo: String,
     price: Number,
     stockQuantity: Number,
-    rating: [Number]
+    rating: Number
 
 });
 
